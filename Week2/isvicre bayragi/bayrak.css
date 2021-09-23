@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+/* bayrak olusturulurken layoutlama olarak grid ozelligi tercih edildi */
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+}
+/* satir ve sutunlar olusturulurken bayragin orijinal olculerine gore deger verildi */
+.grid-container {
+  display: grid;
+  width: 640px;
+  height: 640px;
+  grid-template-rows: 120px 140px 120px 140px 120px;
+  grid-template-columns: 120px 140px 120px 140px 120px;
+  background: red;
+  box-shadow: 20px 20px 10px black;
+}
+
+div {
+  background: white;
+}
+/* bayragin beyaz kismini olusturmak/konumlandirmak icin shorthand 
+ozelligi de kullanilarak satir ve sutun cizgilerine numara araligi verilerdi  */
+.grid-item-dikey {
+  grid-column: 3 / 4;
+  grid-row: 2 / 5;
+}
+
+.grid-item-yatay {
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+}
